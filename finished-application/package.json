@@ -1,0 +1,20 @@
+{
+  "name": "eth-dev-loan",
+  "version": "1.0.0",
+  "description": "A webcast that demonstrates the building blocks of Ethereum development in Solidity, with a Loan Dapp.",
+  "main": "index.js",
+  "scripts": {
+    "test": "truffle test",
+    "compile": "truffle compile",
+    "migrate": "truffle migrate"
+  },
+  "author": "Isaac Sultan",
+  "license": "MIT",
+  "dependencies": {
+    "openzeppelin-solidity": "^2.1.2"
+  },
+  "devDependencies": {
+    "openzeppelin-test-helpers": "^0.1.2",
+    "truffle": "^5.0.2"
+  }
+}
