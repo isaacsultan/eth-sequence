@@ -60,8 +60,9 @@ contract('Loan', function([_, contractOwner, user, userTwo]) {
     const collateralAmount = ether(new BN(500));
     const loanAmount = ether(new BN(1));
     const tokenPrice = new BN(1);
+    const daiName = utf8ToHex('DAI');
     beforeEach(async function() {
-      await loan.setTokenPrice(token.address, tokenPrice, {
+      await loan.setTokenPrice(token.address, daiName, tokenPrice, {
         from: contractOwner,
       });
       await token.approve(loan.address, collateralAmount, { from: user });
@@ -142,9 +143,10 @@ contract('Loan', function([_, contractOwner, user, userTwo]) {
     const collateralAmount = ether(new BN(500));
     const loanAmount = ether(new BN(1));
     const tokenPrice = new BN(1);
+    const daiName = utf8ToHex('DAI');
     const interestRate = new BN(20000000000000);
     beforeEach(async function() {
-      await loan.setTokenPrice(token.address, tokenPrice, {
+      await loan.setTokenPrice(token.address, daiName, tokenPrice, {
         from: contractOwner,
       });
       await loan.setInterestRate(interestRate, {
